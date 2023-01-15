@@ -61,7 +61,7 @@ def pass_gen():
         for x in range(symbol[1]):
             pass_list.append(random.choice(symbols))
     # print(pass_list)
-    print(f"Your password will have {len(pass_list)} characters")
+    print(f"Your final password will have {len(pass_list)} characters")
     for character in range(len(pass_list)):
         rand_char=random.choice(pass_list)
         password+=rand_char

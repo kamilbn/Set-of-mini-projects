@@ -12,6 +12,6 @@ def simpler_pass_gen():
 
     for x in range(length):
         password+=random.choice(characters)
-    print(f"Your password will have {length} characters")
+    print(f"Your final password will have {length} characters")
     print(f"Your generated password is: {password}")
 
