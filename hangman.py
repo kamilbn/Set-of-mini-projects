@@ -121,6 +121,7 @@ def hangman_game():
 
                 for x in range(length_word):
                         if guess == random_word[x]:
+                                print(f"You already guessed the letter: {guess}, type another")
                                 random_word[x]="_"
                                 display[x] = guess
                 print(display)
@@ -128,6 +129,7 @@ def hangman_game():
                         print(''.join(display))
                         print(f"You won. You have kept {lifes + 1} lifes")
                         off = True
+
 
 
 

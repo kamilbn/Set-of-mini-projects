@@ -1,6 +1,22 @@
 
 
-def calculator():
-    a=5
-    b=2
-    print(eval("a+7+3-b"))
+def calc_expr():
+    off=False
+    while not off:
+
+       expr=input("Type your expression (Type 'off' if you want exit): ").lower()
+       if expr == "off":
+           off = True
+       else:
+
+            try:
+               result = eval(expr)
+               print(f"{expr}={result}")
+            except:
+                print(f"Your enter wrong value. Try again." )
+
+            finally:
+                print("Everything works")
+
+
+

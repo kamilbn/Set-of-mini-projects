@@ -5,7 +5,9 @@ def uppers_option():
     upper_pas = input("Do you want have uppercase in password. (Yes/No)").lower()
     if upper_pas == "yes":
         upper_amount = int(input("How many uppercase: "))
+
         return True, upper_amount
+
     else:
         return False
 def lowers_option():
