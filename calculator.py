@@ -2,6 +2,7 @@
 
 def calc_expr():
     off=False
+    print("Expression Calculator")
     while not off:
 
        expr=input("Type your expression (Type 'off' if you want exit): ").lower()
@@ -15,8 +16,6 @@ def calc_expr():
             except:
                 print(f"Your enter wrong value. Try again." )
 
-            finally:
-                print("Everything works")
 
 
 

@@ -21,6 +21,8 @@ def encryption(shift):
         if message[x] in letters:
             index=letters.index(message[x])
             next = index + shift
+            if next >= len(letters):
+                next = next - len(letters)
             encrypt_message+=letters[next]
         elif message[x] == ' ':
             encrypt_message+=' '
@@ -35,24 +37,21 @@ def decryption(shift):
         if message[x] in letters:
             index = letters.index(message[x])
             next=index-shift
-            if next >= len(letters):
-                next=next-len(letters)
+
             decrypt_message += letters[next]
 
         elif message[x] == ' ':
             decrypt_message += ' '
     print(f"Your encoded message is: {decrypt_message}")
 
-# TODO out of index when we set for example shift around 30+
-#  set max value of provided shift for example ten and protection when we not type number in shift input
-
 def again():
 
 
-    again = input("Type 'yes' if you want again. Otherwise type 'no ").lower()
+    again = input("Type 'yes' if you want again. Otherwise type whatever to exit: ").lower()
     if again == "yes":
         cipher()
     else:
+
         print("Thank for using the program. Goodbye")
 
 
@@ -61,22 +60,22 @@ def cipher():
 
 
         print(logo)
-        print("Welcome in the caesar cipher")
         print("Type 'encode' to encrypt, type 'decode' to decrypt:")
         option=input().lower()
-        try:
-            cshift = int(input("Type the shift number: "))
-        except:
-            print("You type wrong value")
-            cipher()
-        if option == 'encode':
-            encryption(cshift)
-            again()
-        elif option == 'decode':
-            decryption(cshift)
-            again()
+
+
+        if option == 'encode' or option == 'decode':
+            shift = int(input("Type the number of shift: "))
+            shift = shift % 26
+            if option == 'encode':
+                encryption(shift)
+                again()
+            elif option == 'decode':
+                decryption(shift)
+                again()
         else:
-            print("Your provided wrong value, pleaase try again!")
+            print("You provided wrong value, please try again!")
+            cipher()
 
 
 
