@@ -7,12 +7,11 @@ def calc_expr():
 ██       ██ ██  ██   ██ ██   ██ ██      ██      ██      ██ ██    ██ ████   ██     ██      ██   ██ ██      ██      ██    ██ ██      ██   ██    ██    ██    ██ ██   ██ 
 █████     ███   ██████  ██████  █████   ███████ ███████ ██ ██    ██ ██ ██  ██     ██      ███████ ██      ██      ██    ██ ██      ███████    ██    ██    ██ ██████  
 ██       ██ ██  ██      ██   ██ ██           ██      ██ ██ ██    ██ ██  ██ ██     ██      ██   ██ ██      ██      ██    ██ ██      ██   ██    ██    ██    ██ ██   ██ 
-███████ ██   ██ ██      ██   ██ ███████ ███████ ███████ ██  ██████  ██   ████      ██████ ██   ██ ███████  ██████  ██████  ███████ ██   ██    ██     ██████  ██   ██ 
-                                                                                                                                                                                                                                                                                                                                        
+███████ ██   ██ ██      ██   ██ ███████ ███████ ███████ ██  ██████  ██   ████      ██████ ██   ██ ███████  ██████  ██████  ███████ ██   ██    ██     ██████  ██   ██                                                                                                                                                                                                                                                                                                                                       
 """)
     while not off:
-       print("Type 'off' if you want exit")
-       expr=input("\nType your expression: ").lower()
+       print("Type your expression or 'off' if you want exit ")
+       expr=input("Expression: ").lower()
        if expr == "off":
            off = True
        else:
@@ -20,6 +19,7 @@ def calc_expr():
             try:
                result = eval(expr)
                print(f"Result:  {expr}={result}")
+                print('─' * 50)
             except:
                 print(f"Your enter wrong value. Try again." )
 
