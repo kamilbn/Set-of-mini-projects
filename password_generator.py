@@ -1,4 +1,4 @@
-#Password Generator Project
+
 import random
 
 def uppers_option():
@@ -24,7 +24,7 @@ def numbers_option():
         return True, number_amount
     else:
         return False
-def symbols_options():
+def symbols_option():
     symbols_pas = input("Do you want have symbols in password. (Yes/No)").lower()
     if symbols_pas == "yes":
         symbols_amount = int(input("How many symbols: "))
@@ -43,12 +43,19 @@ def pass_gen():
     symbols = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')']
     pass_list = []
     password=""
+    print("""
+██████   █████  ███████ ███████ ██     ██  ██████  ██████  ██████       ██████  ███████ ███    ██ ███████ ██████   █████  ████████  ██████  ██████  
+██   ██ ██   ██ ██      ██      ██     ██ ██    ██ ██   ██ ██   ██     ██       ██      ████   ██ ██      ██   ██ ██   ██    ██    ██    ██ ██   ██ 
+██████  ███████ ███████ ███████ ██  █  ██ ██    ██ ██████  ██   ██     ██   ███ █████   ██ ██  ██ █████   ██████  ███████    ██    ██    ██ ██████  
+██      ██   ██      ██      ██ ██ ███ ██ ██    ██ ██   ██ ██   ██     ██    ██ ██      ██  ██ ██ ██      ██   ██ ██   ██    ██    ██    ██ ██   ██ 
+██      ██   ██ ███████ ███████  ███ ███   ██████  ██   ██ ██████       ██████  ███████ ██   ████ ███████ ██   ██ ██   ██    ██     ██████  ██   ██                                                                                                                                                   
+    """)
     print("Welcome in the password generator!")
 
     upper=uppers_option()
     lower=lowers_option()
     number=numbers_option()
-    symbol=symbols_options()
+    symbol=symbols_option()
 
     if upper:
         for x in range(upper[1]):
@@ -67,10 +74,12 @@ def pass_gen():
     for character in range(len(pass_list)):
         rand_char=random.choice(pass_list)
         password+=rand_char
-        #print(f"Deleting: {rand_char}")
         pass_list.remove(rand_char)
 
     print(f"Your generated password is: {password}")
+    action = input(" If you want generate password again type: 'yes' or anything else to exit: ").lower()
+    if action == 'yes':
+        pass_gen()
 
 
 

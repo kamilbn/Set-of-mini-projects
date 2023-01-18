@@ -2,17 +2,24 @@
 
 def calc_expr():
     off=False
-    print("Expression Calculator")
+    print("""\n
+███████ ██   ██ ██████  ██████  ███████ ███████ ███████ ██  ██████  ███    ██      ██████  █████  ██       ██████ ██    ██ ██       █████  ████████  ██████  ██████  
+██       ██ ██  ██   ██ ██   ██ ██      ██      ██      ██ ██    ██ ████   ██     ██      ██   ██ ██      ██      ██    ██ ██      ██   ██    ██    ██    ██ ██   ██ 
+█████     ███   ██████  ██████  █████   ███████ ███████ ██ ██    ██ ██ ██  ██     ██      ███████ ██      ██      ██    ██ ██      ███████    ██    ██    ██ ██████  
+██       ██ ██  ██      ██   ██ ██           ██      ██ ██ ██    ██ ██  ██ ██     ██      ██   ██ ██      ██      ██    ██ ██      ██   ██    ██    ██    ██ ██   ██ 
+███████ ██   ██ ██      ██   ██ ███████ ███████ ███████ ██  ██████  ██   ████      ██████ ██   ██ ███████  ██████  ██████  ███████ ██   ██    ██     ██████  ██   ██ 
+                                                                                                                                                                                                                                                                                                                                        
+""")
     while not off:
-
-       expr=input("Type your expression (Type 'off' if you want exit): ").lower()
+       print("\nType 'off' if you want exit")
+       expr=input("\nType your expression: ").lower()
        if expr == "off":
            off = True
        else:
 
             try:
                result = eval(expr)
-               print(f"{expr}={result}")
+               print(f"Result:  {expr}={result}")
             except:
                 print(f"Your enter wrong value. Try again." )
 

@@ -58,14 +58,14 @@ stages = ['''
 ''']
 
 logo = ''' 
- _                                             
-| |                                            
-| |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
-| '_ \ / _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
-| | | | (_| | | | | (_| | | | | | | (_| | | | |
-|_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
-                    __/ |                      
-                   |___/    '''
+
+██   ██  █████  ███    ██  ██████  ███    ███  █████  ███    ██ 
+██   ██ ██   ██ ████   ██ ██       ████  ████ ██   ██ ████   ██ 
+███████ ███████ ██ ██  ██ ██   ███ ██ ████ ██ ███████ ██ ██  ██ 
+██   ██ ██   ██ ██  ██ ██ ██    ██ ██  ██  ██ ██   ██ ██  ██ ██ 
+██   ██ ██   ██ ██   ████  ██████  ██      ██ ██   ██ ██   ████ 
+                                                                                                                           
+    '''
 
 word_list = [
     'coincide',
@@ -115,8 +115,8 @@ def hangman_game():
             if lifes <= 0:
                 print(stages[lifes])
                 print("You lost.")
-                action = input(" If you want play again type: 'yes' or anything else to exit: ").lower()
-                if action == 'yes':
+                action1 = input(" If you want play again type: 'yes' or anything else to exit: ").lower()
+                if action1 == 'yes':
                     hangman_game()
                 else:
                     break

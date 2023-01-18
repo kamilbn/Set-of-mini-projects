@@ -8,14 +8,22 @@ def simpler_pass_gen():
     password=""
 
     while True:
-        print("Welcome in the password generator!")
+
+        print("""
+        ██████   █████  ███████ ███████ ██     ██  ██████  ██████  ██████       ██████  ███████ ███    ██ ███████ ██████   █████  ████████  ██████  ██████  
+        ██   ██ ██   ██ ██      ██      ██     ██ ██    ██ ██   ██ ██   ██     ██       ██      ████   ██ ██      ██   ██ ██   ██    ██    ██    ██ ██   ██ 
+        ██████  ███████ ███████ ███████ ██  █  ██ ██    ██ ██████  ██   ██     ██   ███ █████   ██ ██  ██ █████   ██████  ███████    ██    ██    ██ ██████  
+        ██      ██   ██      ██      ██ ██ ███ ██ ██    ██ ██   ██ ██   ██     ██    ██ ██      ██  ██ ██ ██      ██   ██ ██   ██    ██    ██    ██ ██   ██ 
+        ██      ██   ██ ███████ ███████  ███ ███   ██████  ██   ██ ██████       ██████  ███████ ██   ████ ███████ ██   ██ ██   ██    ██     ██████  ██   ██ 
+            """)
+        print("Welcome in the simpler password generator!")
         length=int(input("Enter the length of password: "))
 
         for x in range(length):
             password+=random.choice(characters)
         print(f"Your final password will have {length} characters")
         print(f"Your generated password is: {password}")
-        action = input(" If you want play again type: 'yes' or anything else to exit: ").lower()
+        action = input(" If you want generate password again type: 'yes' or anything else to exit: ").lower()
         if action == 'yes':
             simpler_pass_gen()
         else:
