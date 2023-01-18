@@ -2,7 +2,7 @@
 
 def calc_expr():
     off=False
-    print("""\n
+    print("""
 ███████ ██   ██ ██████  ██████  ███████ ███████ ███████ ██  ██████  ███    ██      ██████  █████  ██       ██████ ██    ██ ██       █████  ████████  ██████  ██████  
 ██       ██ ██  ██   ██ ██   ██ ██      ██      ██      ██ ██    ██ ████   ██     ██      ██   ██ ██      ██      ██    ██ ██      ██   ██    ██    ██    ██ ██   ██ 
 █████     ███   ██████  ██████  █████   ███████ ███████ ██ ██    ██ ██ ██  ██     ██      ███████ ██      ██      ██    ██ ██      ███████    ██    ██    ██ ██████  
@@ -11,7 +11,7 @@ def calc_expr():
                                                                                                                                                                                                                                                                                                                                         
 """)
     while not off:
-       print("\nType 'off' if you want exit")
+       print("Type 'off' if you want exit")
        expr=input("\nType your expression: ").lower()
        if expr == "off":
            off = True
