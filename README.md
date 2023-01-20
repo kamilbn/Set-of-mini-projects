@@ -23,5 +23,4 @@ python main.py
 
 ## Screenshot
 
-
 ![mini_programs](https://user-images.githubusercontent.com/119300086/213788843-985c8505-f633-4b0b-9ac2-672dd1655534.PNG)
