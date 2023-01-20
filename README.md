@@ -16,6 +16,11 @@ Expression Calculator.
 Program at start ask user to choose one of five mini program.
 Every program leads user, what should do.
 
+## How to run the script
+
+python main.py
+
+
 ## Screenshot
 
 
