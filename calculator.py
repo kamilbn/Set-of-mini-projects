@@ -11,7 +11,7 @@ def calc_expr():
 """)
     while not off:
        print("Type your expression or 'off' if you want exit ")
-       expr=input("Expression: ").lower()
+       expr=input("Expression (Example: 2+(10/2)*5 ): ").lower()
        if expr == "off":
            off = True
        else:
