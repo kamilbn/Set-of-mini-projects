@@ -1,2 +1,22 @@
-# Set-of-mini-projects
-Collection of mini programs with using Python language
+# Set of mini projects
+Collection of mini programs.
+
+## Technology
+Python 3.10
+
+## Simple description
+
+It is a set of mini programs inluded in one console program.
+Program at this moment contains:
+Password generator in two versions.
+Caesar cipher.
+Hangman game.
+Expression Calculator. 
+
+Program at start ask user to choose one of five mini program.
+Every program leads user, what should do.
+
+## Screenshot
+
+
+![mini_programs](https://user-images.githubusercontent.com/119300086/213788843-985c8505-f633-4b0b-9ac2-672dd1655534.PNG)
