@@ -32,7 +32,5 @@ while not off:
             hangman.hangman_game()
         case "5":
             calc.calc_expr()
-        case "6":
-            assert 10 % 2 == 1, 'Error'
-            print("xd")
+        
 
